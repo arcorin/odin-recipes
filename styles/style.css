@@ -1,0 +1,27 @@
+
+body { box-sizing: border-box; }
+a { text-decoration: none; }
+
+
+.container { display: flex; justify-content: center; align-items: center; order: 1px solid red; }
+
+.vertical { flex-direction: column; }
+
+h1 { margin: 3rem; }
+
+.recipes { justify-content: center; flex-wrap: wrap; margin: auto; width: clamp(400px, 80%, 2000px); }
+
+.credits { margin-bottom: 2rem; }
+    .credits p { margin: 0; text-align: center; }
+
+.recipe-card { margin: 40px 40px; box-shadow: 8px 8px 20px 10px lightgray; }
+
+.recipe-item { flex-direction: column; width: 400px; margin: 1.5rem; }
+    .recipe-item h2 { width: 100%; text-align: left; } 
+
+ul.info-list,
+ul.nutrition-list { display: grid; grid-template-columns: 1fr 1fr; width: 300px; list-style-type: none; }
+    .info-list li,
+    .nutrition-list li { margin: 4px; }
+        .info-list p,
+        .nutrition-list p { margin: 4px; }
