@@ -1,7 +1,7 @@
+/* index & recipes pages */
 
-body { box-sizing: border-box; }
+* { box-sizing: border-box; }
 a { text-decoration: none; }
-
 
 .container { display: flex; justify-content: center; align-items: center; order: 1px solid red; }
 
@@ -16,12 +16,29 @@ h1 { margin: 3rem; }
 
 .recipe-card { margin: 40px 40px; box-shadow: 8px 8px 20px 10px lightgray; }
 
-.recipe-item { flex-direction: column; width: 400px; margin: 1.5rem; }
+.card-image img { margin: 16px; }
+
+
+
+/* recipe pages */
+
+.recipe-page { width: 500px; margin: auto; box-shadow: 8px 8px 20px 10px lightgray; }
+ 
+.recipe-item { flex-direction: column; width: 400px; margin: 1rem; }
     .recipe-item h2 { width: 100%; text-align: left; } 
 
+.recipe-image { margin-bottom: 1rem; }
+    .recipe-caption { padding:  .5rem; }
+
 ul.info-list,
-ul.nutrition-list { display: grid; grid-template-columns: 1fr 1fr; width: 300px; list-style-type: none; }
-    .info-list li,
-    .nutrition-list li { margin: 4px; }
-        .info-list p,
-        .nutrition-list p { margin: 4px; }
+ul.nutrition-list { display: grid; grid-template-columns: 1fr 1fr; width: 400px; height: 100px; list-style-type: none; }
+    li.info-item,
+    li.nutrition-item { margin: 0; display: flex; }
+        p.info-prop,
+        p.nutrition-prop { margin-right: 8px; width: 50%; text-align: right; font-weight: 700; }
+
+        p.info-value,
+        p.nutrition-value { margin-right: 8px; }
+
+
+footer { height: 100px; }
