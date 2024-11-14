@@ -1,17 +1,75 @@
+
+/* SCSS Variables */
+:root {
+    --color-dark: rgb(70, 68, 53);
+    --color-medium: rgb(143, 140, 119);
+    --color-light: rgb(255, 253, 240);
+    --color-accent: rgb(255, 177, 41);
+
+}
+
+
+/* fonts */
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url("../fonts/atkinson-hyperlegible-regular-102a.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+@font-face {
+    font-family: "Atkinson Hyperlegible";
+    font-style: normal;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../fonts/atkinson-hyperlegible-bold-102a.woff2") format("woff2");
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+
+/* Custom CSS reset */
+html {
+    font-family: "Atkinson Hyperlegible", "Inter", "Roboto", "Helvetica Neue", "Arial Nova", "Nimbus Sans", Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+  }
+
+
+body { box-sizing: border-box; margin: 0; padding: 0}
+a,
+a:visited { color: var(--color-dark); text-decoration: none; }
+
+h1 { margin-bottom: 4px; width: clamp(500px, 70vw, 800px); text-align: center; font-size: 4rem; border-bottom: 4px solid var(--color-accent); }
+
+
 /* index & recipes pages */
 
-* { box-sizing: border-box; }
-a { text-decoration: none; }
+.container { display: flex; justify-content: center; align-items: center; }
 
-.container { display: flex; justify-content: center; align-items: center; order: 1px solid red; }
+header,
+footer { background-color: var(--color-dark); }
+
+header { position: fixed; top: 0; width: 100%; }
+.page-title { padding-left: 5%; width: 100%; }
+    header .page-title.container p{ width: 100%; justify-content: left; font-size: 2rem; font-weight: 900; color: var(--color-accent);  }
+        .page-title a:visited {  color: var(--color-accent); }
+
+
+main { margin: 12rem 0 4rem; background-color: var(--color-light); color: var(--color-dark) }
+
+
 
 .vertical { flex-direction: column; }
-
-h1 { margin: 3rem; }
+    
 
 .recipes { justify-content: center; flex-wrap: wrap; margin: auto; width: clamp(400px, 80%, 2000px); }
 
-.credits { margin-bottom: 2rem; }
+.credits { margin-bottom: 4rem; display: flex; }
+  .credits p:last-child { margin-left: 2rem; }
     .credits p { margin: 0; text-align: center; }
 
     .recipe-card { margin: 40px 40px; padding-bottom: 24px; box-shadow: 8px 8px 20px 10px lightgray; }
@@ -24,13 +82,17 @@ h1 { margin: 3rem; }
 
 /* recipe pages */
 
-.recipe-page { width: 500px; margin: auto; box-shadow: 8px 8px 20px 20px lightgray; }
+/*
+.recipe-main { width: 500px; margin: auto; box-shadow: 8px 8px 20px 20px lightgray; }
+*/
  
 .recipe-item { flex-direction: column; width: 400px; margin: 1rem; }
-    .recipe-item h2 { width: 100%; text-align: left; } 
-
+    .recipe-item h2 { width: 100%; text-align: left; }
 .recipe-image { margin-bottom: 1rem; }
     .recipe-caption { padding:  .5rem; }
+
+.recipe-main img { width: clamp(400px, 40%, 600px); height: auto; }
+
 
 ul.info-list,
 ul.nutrition-list { display: grid; grid-template-columns: 1fr 1fr; width: 400px; height: 100px; list-style-type: none; }
